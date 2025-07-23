@@ -1,0 +1,209 @@
+@import "../../styles/index.scss";
+
+.header {
+    padding: $padding-mob;
+    @include items-center();
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: $light-box-shadow;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    transition: top .25s ease-in-out;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .logo {
+        @include items-center();
+        gap: .6em;
+        cursor: pointer;
+
+        span {
+            font-size: 1.3rem;
+            font-family: 'Saira-med';
+            letter-spacing: -1px;
+        }
+
+        img {
+            width: 1.3rem;
+            aspect-ratio: 1/1;
+        }
+    }
+
+
+    nav {
+        position: fixed;
+        top: 100%;
+        opacity: 1;
+        left: 50%;
+        z-index: 999;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(10px);
+        min-height: 30vh;
+        height: fit-content;
+        width: 90vw;
+        max-width: 450px;
+        @include items-center();
+        flex-direction: column;
+        padding-block: 4rem 2rem;
+        gap: 1rem;
+        border-radius: 3rem;
+        transition: bottom .3s ease-in-out, opacity .3s ease-in;
+
+        .close-menu-btn {
+            width: 30%;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 0.9rem;
+            opacity: 0.2;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        .nav-item {
+            font-size: 1.3rem;
+            color: $theme-light-color;
+            text-decoration: none;
+            font-family: 'Saira-light';
+            text-wrap: nowrap;
+        }
+
+        .nav-item.active {
+            color: $theme-drk-color;
+            font-family: 'Saira-med';
+
+        }
+
+        .login-btn {
+            @include base-btn();
+            color: $white;
+            border: 1px solid $white;
+            padding: .5rem 2rem;
+            background-color: transparent;
+            margin-top: 2rem;
+            font-size: $normal-txt-sz;
+            text-decoration: none;
+            transition: color .2s ease-out, background-color .2s ease-in;
+
+            &:hover{
+                background-color: $theme-drk-color;
+                color: white;
+            }
+        }
+
+    }
+
+    nav.active {
+        bottom: 0%;
+        opacity: 1;
+    }
+
+    .open-menu-btn {
+        @include base-btn();
+        background-color: $theme-drk-color;
+        border: 1px solid $theme-drk-color;
+        box-shadow: $light-box-shadow;
+        color: white;
+        font-size: .8rem;
+        padding: .15rem 1.1rem;
+    }
+}
+
+.header.show {
+    position: fixed;
+    top: 0;
+}
+
+.header.hide {
+    top: -100px;
+}
+
+
+// responsive styling
+
+@media (min-width : $small-screens) {
+    .header {
+        padding: $padding-tab;
+    }
+}
+
+@media (min-width : $med-screens) {
+    .header {
+        padding-block: 0.5rem;
+
+        .logo {
+            span {
+                font-size: 1.3rem;
+                font-family: 'Saira-med';
+                letter-spacing: -1px;
+
+                text-wrap: nowrap;
+            }
+
+            img {
+                width: 1.3rem;
+                aspect-ratio: 1/1;
+            }
+        }
+
+        nav {
+            position: relative;
+            bottom: initial;
+            left: initial;
+            opacity: 1;
+            transform: translateX(0);
+            background-color: transparent;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding-block: 0;
+            border-radius: 0;
+            // height: fit-content;
+            min-height: initial;
+            gap: 2rem;
+
+            .nav-item {
+                color: $headings-color;
+                font-family: 'Saira-light';
+                font-size: .95rem;
+            }
+
+            .close-menu-btn {
+                display: none;
+            }
+
+            .login-btn {
+                color: $headings-color;
+                border-color: $headings-color;
+                margin-top: initial;
+                margin-left: 1.5rem;
+                font-size: .9rem;
+                padding: .15rem 1.1rem;
+            }
+        }
+
+        .open-menu-btn {
+            display: none;
+        }
+    }
+}
+
+@media (min-width : $large-screens) {
+    .header {
+        padding: $padding-desk;
+
+        nav {
+            gap: 3.5rem;
+
+            .login-btn {
+                font-size: $normal-txt-sz;
+                padding: .35rem 1.8rem;
+            }
+        }
+    }
+}

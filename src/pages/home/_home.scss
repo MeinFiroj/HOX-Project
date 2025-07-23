@@ -1,0 +1,58 @@
+@import '../../styles//hero.home';
+
+main {
+    height: 100%;
+    width: 100%;
+
+    section {
+        padding: $padding-mob;
+        width: 100%;
+        min-height: 50%;
+    }
+}
+
+
+.inflencetobrand{
+    background-color: crimson;
+}
+.team{
+    background-color: greenyellow;
+}
+.investors{
+    background-color: lightblue;
+}
+.doubts{
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width : $med-screens) {
+    main {
+        section {
+            padding: $padding-tab;
+        }
+    }
+}
+
+
+@media (min-width : $large-screens) {
+    main {
+        section {
+            padding: $padding-desk;
+        }
+    }
+}

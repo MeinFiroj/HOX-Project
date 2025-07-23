@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "main-heading";
+  src: url(../assets/fonts/SairaStencilOne-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Saira-thin";
+  src: url(../assets/fonts/Saira-Thin.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira-light";
+  src: url(../assets/fonts/Saira-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira-regular";
+  src: url(../assets/fonts/Saira-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira-med";
+  src: url(../assets/fonts/Saira-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira-semibold";
+  src: url(../assets/fonts/Saira-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira-bold";
+  src: url(../assets/fonts/Saira-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.hero {
+  padding-block: 1rem;
+}
+.hero .headings {
+  position: relative;
+  z-index: 1;
+}
+.hero .headings h1,
+.hero .headings h2 {
+  font-family: "main-heading";
+}
+.hero .headings h1 {
+  font-size: clamp(20px, 15vw, 130px);
+  color: #464545;
+  line-height: 1.5;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .headings h2 {
+  font-size: clamp(20px, 17vw, 150px);
+  color: #d4ffe0;
+  text-wrap: nowrap;
+  position: absolute;
+  z-index: -1;
+  top: clamp(10px, 7.5vw, 65px);
+  left: 1rem;
+}
+.hero p {
+  font-size: 1rem;
+  color: #8E8A8A;
+  text-align: center;
+  margin-top: 1.5rem;
+  width: 98%;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .hero p {
+    text-align: end;
+    margin: 2.5rem 0 0 auto;
+    width: 640px;
+  }
+}
+@media (min-width: 1000px) {
+  .hero {
+    padding-block: 2.5rem;
+  }
+  .hero .headings h1 {
+    font-size: 8.8rem;
+    width: 80%;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    text-shadow: 0.5px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .hero .headings h1 br {
+    display: none;
+  }
+  .hero .headings h2 {
+    font-size: 10rem;
+    letter-spacing: 5px;
+    top: 5.2rem;
+    left: 5rem;
+  }
+  .hero p {
+    width: 54%;
+    font-size: 1.2rem;
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .headings h2 {
+    left: 10rem;
+  }
+}
+main {
+  height: 100%;
+  width: 100%;
+}
+main section {
+  padding: 0.3rem 0.5rem;
+  width: 100%;
+  min-height: 50%;
+}
+
+.inflencetobrand {
+  background-color: crimson;
+}
+
+.team {
+  background-color: greenyellow;
+}
+
+.investors {
+  background-color: lightblue;
+}
+
+.doubts {
+  background-color: green;
+}
+
+@media (min-width: 768px) {
+  main section {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  main section {
+    padding: 0.8rem 3.1rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira-regular";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #F1FFF5;
+  position: relative;
+}
+
+#root {
+  padding-top: 2.7rem;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 425px) {
+  #root {
+    padding-top: 3.1rem;
+  }
+}
+@media (min-width: 1000px) {
+  #root {
+    padding-top: 4rem;
+  }
+}

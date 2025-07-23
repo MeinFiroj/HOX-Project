@@ -1,0 +1,46 @@
+@import './variables';
+@import './mixins';
+@import './fonts';
+
+// pages styles imported 
+@import "../pages/home/home";
+@import "../pages/become_a_partner/bepartner";
+@import "../pages/contact/contact";
+@import "../pages/hox_launch/hoxlaunch";
+@import "../pages/page_not_found/pagenotfound";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Saira-regular';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $theme-light-color;
+    position: relative;
+}
+
+#root {
+    padding-top: 2.7rem;
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width : $small-screens) {
+    #root {
+        padding-top: 3.1rem;
+    }
+}
+
+@media (min-width : $large-screens) {
+    #root {
+        padding-top: 4rem;
+    }
+}

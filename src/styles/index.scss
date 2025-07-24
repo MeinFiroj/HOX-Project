@@ -20,17 +20,19 @@ html,
 body {
     height: 100%;
     width: 100%;
+    // overflow-x: hidden;
 }
 
 body {
     background-color: $theme-light-color;
-    position: relative;
+    // position: relative;
+    // overflow-x: hidden;
 }
 
 #root {
-    padding-top: 2.7rem;
-    height: 100%;
+    // height: 100%;
     width: 100%;
+    position: relative;
 }
 
 @media (min-width : $small-screens) {

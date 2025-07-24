@@ -1,58 +1,88 @@
-@import '../../styles//hero.home';
+@import '../../components/hero/hero.home';
+@import '../../components/marque/marque';
+@import '../../components/influencetobrand/influencetobrand';
+@import '../../components/ourteam/ourteam';
 
 main {
     height: 100%;
     width: 100%;
 
     section {
-        padding: $padding-mob;
         width: 100%;
         min-height: 50%;
     }
 }
 
+.our-team,
+.investors {
+    min-height: 60vh;
+    padding: $padding-mob;
+    padding-block: 1.5rem;
+    position: relative;
 
-.inflencetobrand{
-    background-color: crimson;
+    .heading {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: $theme-light-color;
+        z-index: 9;
+
+        h1 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            line-height: 1;
+            color: $headings-color;
+            font-size: clamp(20px, 14vw, 130px);
+        }
+    }
 }
-.team{
-    background-color: greenyellow;
+
+
+
+
+// width : 768px 
+@media (min-width : $med-screens) {
+
+    .our-team,
+    .investors {
+        padding: $padding-tab;
+        padding-block: 2.5rem;
+
+        .heading {
+            h1 {
+                font-size: clamp(20px, 12vw, 130px);
+            }
+        }
+    }
 }
-.investors{
+
+
+// width : 1000px
+@media (min-width : $large-screens) {
+
+    .our-team,
+    .investors {
+        padding: $padding-desk;
+        padding-block: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.investors {
     background-color: lightblue;
 }
-.doubts{
+
+.doubts {
     background-color: green;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width : $med-screens) {
-    main {
-        section {
-            padding: $padding-tab;
-        }
-    }
-}
-
-
-@media (min-width : $large-screens) {
-    main {
-        section {
-            padding: $padding-desk;
-        }
-    }
 }

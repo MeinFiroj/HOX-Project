@@ -6,12 +6,13 @@ $text-color : #8E8A8A;
 $headings-color : #464545;
 $black : #000;
 $white : #fff;
-$padding-mob : 0.3rem 0.5rem;
+$padding-mob : 0.5rem 0.8rem;
 $padding-tab : 0.5rem 1.5rem;
 $padding-desk : 0.8rem 3.1rem;
 $light-box-shadow : 1px 1px 5px rgba(0, 0, 0, 0.1);
 $normal-txt-sz : 1rem;
 $heading-sz : 8rem;
+$responsive-sz : clamp(20px, 15vw, 130px);
 
 $small-screens : 425px;
 $med-screens : 768px;

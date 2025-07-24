@@ -32,7 +32,7 @@ const Navbar = () => {
   const closeMenu = () => setIsActive(false);
 
   return (
-    <header className={`header ${showHeader ? "show" : "hide"}`}>
+    <header className={`header ${showHeader ? "" : "hide"}`}>
       <div className="logo">
         <span>House Of</span>
         <img src="/hox-logo.webp" alt="X logo" />

@@ -1,18 +1,34 @@
-@import "../../styles/index.scss";
+@use "../../styles/index.scss" as *;
 
 .header {
     padding: $padding-mob;
+    padding-block: .7rem;
     @include items-center();
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: $light-box-shadow;
     position: fixed;
     top: 0;
     z-index: 999;
     width: 100%;
     transition: top .25s ease-in-out;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+
+    &:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: $light-box-shadow;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.02);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    &.hide {
+        top: -100px;
+    }
 
     .logo {
         @include items-center();
@@ -31,15 +47,15 @@
         }
     }
 
-
     nav {
         position: fixed;
-        top: 100%;
-        opacity: 1;
+        bottom: -100%;
+        opacity: 0;
         left: 50%;
         z-index: 999;
         transform: translateX(-50%);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: $theme-color;
+        background-color: rgba(0, 49, 14, 0.3);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(10px);
         min-height: 30vh;
@@ -52,6 +68,11 @@
         gap: 1rem;
         border-radius: 3rem;
         transition: bottom .3s ease-in-out, opacity .3s ease-in;
+
+        &.active {
+            bottom: 0%;
+            opacity: 1;
+        }
 
         .close-menu-btn {
             width: 30%;
@@ -91,17 +112,12 @@
             text-decoration: none;
             transition: color .2s ease-out, background-color .2s ease-in;
 
-            &:hover{
+            &:hover {
                 background-color: $theme-drk-color;
                 color: white;
             }
         }
 
-    }
-
-    nav.active {
-        bottom: 0%;
-        opacity: 1;
     }
 
     .open-menu-btn {
@@ -115,14 +131,7 @@
     }
 }
 
-.header.show {
-    position: fixed;
-    top: 0;
-}
 
-.header.hide {
-    top: -100px;
-}
 
 
 // responsive styling
@@ -136,6 +145,10 @@
 @media (min-width : $med-screens) {
     .header {
         padding-block: 0.5rem;
+
+        &:before {
+            box-shadow: $light-box-shadow;
+        }
 
         .logo {
             span {
@@ -159,18 +172,20 @@
             opacity: 1;
             transform: translateX(0);
             background-color: transparent;
+            backdrop-filter: blur(0);
+            -webkit-backdrop-filter: blur(0);
             flex-direction: row;
             justify-content: flex-end;
             padding-block: 0;
             border-radius: 0;
-            // height: fit-content;
+            height: fit-content;
             min-height: initial;
             gap: 2rem;
 
             .nav-item {
                 color: $headings-color;
                 font-family: 'Saira-light';
-                font-size: .95rem;
+                font-size: $normal-txt-sz;
             }
 
             .close-menu-btn {

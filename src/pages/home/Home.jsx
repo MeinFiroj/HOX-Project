@@ -1,20 +1,15 @@
 import InfluenceToBrand from "../../components/influencetobrand/InfluenceToBrand";
 import Hero from "../../components/hero/Hero";
 import OurTeam from "../../components/ourteam/OurTeam";
+import OurInvestors from "../../components/ourinvestors/OurInvestors";
 
 const Home = () => {
   return (
     <main>
       <Hero />
       <InfluenceToBrand />
-
       <OurTeam />
-
-      <section className="investors">
-        <div className="heading">
-          <h1><span>Our</span> <span>investors</span></h1>
-        </div>
-      </section>
+      <OurInvestors />
 
       {/* <section className="doubts">
         <div className="heading">

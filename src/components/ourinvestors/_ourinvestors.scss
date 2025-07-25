@@ -1,0 +1,77 @@
+.investors {
+    position: relative;
+
+    .all-investors {
+        width: 100%;
+        margin-top: 3rem;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .investor {
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            cursor: default;
+            position: relative;
+            flex-shrink: 0;
+            text-align: center;
+
+            h3,
+            p {
+                pointer-events: none;
+                user-select: none;
+                text-shadow: 0 0 10px $theme-drk-color;
+            }
+
+            h3 {
+                text-wrap: nowrap;
+                font-size: clamp(8px, 7vw, 1.2rem);
+                font-family: 'Saira-regular';
+            }
+
+            .overlay {
+                height: 100%;
+                width: 100%;
+                background-color: transparent;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+        }
+
+        .cursor {
+            height: 20px;
+            width: 20px;
+            background-color: $black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            z-index: 9;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width : $large-screens) {
+    .investors {
+        .all-investors {
+            gap: 6rem;
+
+            .cursor {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}

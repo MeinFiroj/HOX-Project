@@ -1,8 +1,4 @@
 .our-team {
-    hr {
-        margin-block: 1.5rem;
-    }
-
     .content {
         width: 100%;
         position: relative;
@@ -34,7 +30,10 @@
                     text-transform: uppercase;
                     user-select: none;
                     color: $theme-drk-color;
-                    transition: all .1s ease;
+                    transition: all .17s ease-in-out;
+                    background-color: $theme-med-color;
+                    padding: 1rem;
+                    cursor: pointer;
                 }
             }
 
@@ -57,7 +56,7 @@
 
             h4 {
                 font-size: 4vw;
-                color: $headings-color;
+                color: $black;
                 font-family: 'Saira-thin';
             }
 
@@ -67,19 +66,16 @@
                 object-fit: cover;
                 border-radius: 1rem;
                 margin-top: .3rem;
+                object-position: top;
             }
         }
+
     }
 }
 
 
 @media (min-width : $med-screens) {
     .our-team {
-
-        hr {
-            margin-block: 2.5rem;
-        }
-
         .content {
 
             .members-cont {
@@ -107,6 +103,8 @@
                         writing-mode: initial;
                         font-size: 6vw;
                         text-wrap: nowrap;
+                        background-color: transparent;
+                        padding: 0;
                     }
                 }
 
@@ -141,10 +139,12 @@
 
 @media (min-width : $large-screens) {
     .our-team {
+
         .content {
             .members-cont {
                 .member {
                     flex-direction: row;
+                    align-items: center;
 
                     h4 {
                         opacity: 1;
@@ -152,11 +152,20 @@
 
                     h2 {
                         font-size: 5vw;
-                        width: 70rem;
+                        width: 75vw;
                         position: relative;
                         z-index: 8;
                     }
+
+                    h2:hover {
+                        transform: translateX(50px);
+                    }
                 }
+
+                #co-founder {
+                    align-items: flex-start;
+                }
+
             }
 
             .members-img {

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import image from '../../../public/hox-logo.webp'
 
 const OurTeam = () => {
   const [currentImg, setCurrentImg] = useState(null);
 
   const showImg = (e) => {
     e.target.style.opacity = 1;
-    e.target.style.transform = "translateX(30px)";
+    // e.target.style.transform = "translateX(30px)";
     e.target.previousElementSibling.style.opacity = 1;
     setCurrentImg(
       <div className="members-img">
@@ -17,7 +18,7 @@ const OurTeam = () => {
 
   const hideImg = (e) => {
     e.target.style.opacity = 0.5;
-    e.target.style.transform = "translateX(0)";
+    // e.target.style.transform = "translateX(0)";
     e.target.previousElementSibling.style.opacity = 0;
     setCurrentImg(null);
   };
@@ -29,7 +30,7 @@ const OurTeam = () => {
           <span>Founding</span> <span>Team</span>
         </h1>
       </div>
-      <hr />
+      <hr className="sticky"/>
 
       <div className="content">
         <div className="members-cont">

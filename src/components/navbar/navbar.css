@@ -39,14 +39,14 @@
   font-style: normal;
 }
 .hero {
-  padding-block: 1rem;
+  padding: 0.5rem 0.8rem;
+  padding-block: 3.5rem;
 }
 .hero .headings {
   position: relative;
   z-index: 1;
 }
-.hero .headings h1,
-.hero .headings h2 {
+.hero .headings * {
   font-family: "main-heading";
 }
 .hero .headings h1 {
@@ -69,12 +69,16 @@
   font-size: 1rem;
   color: #8E8A8A;
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   width: 98%;
   margin-inline: auto;
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding: 0.5rem 1.5rem;
+    padding-bottom: 2rem;
+  }
   .hero p {
     text-align: end;
     margin: 2.5rem 0 0 auto;
@@ -83,7 +87,9 @@
 }
 @media (min-width: 1000px) {
   .hero {
+    padding: 0.8rem 3.1rem;
     padding-block: 2.5rem;
+    min-height: 100%;
   }
   .hero .headings h1 {
     font-size: 8.8rem;
@@ -112,42 +118,365 @@
     left: 10rem;
   }
 }
+.influencetobrand .heading {
+  display: flex;
+  overflow: hidden;
+  background-color: #00310E;
+  position: relative;
+}
+.influencetobrand .heading::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(to right, #F1FFF5 50%, transparent);
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.influencetobrand .heading::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(to left, #F1FFF5 50%, transparent);
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.influencetobrand .heading h1 {
+  flex-shrink: 0;
+  color: #F1FFF5;
+  padding: 0.5rem 0;
+  transform: translateX(-100%);
+  font-size: 6vw;
+}
+.influencetobrand .heading h1 .circle {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #F1FFF5;
+  margin-inline: 1rem 1.3rem;
+}
+
+.influencetobrand {
+  border: 2px solid red;
+}
+.influencetobrand .slider-cont {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 3.5rem;
+}
+.influencetobrand .slider-cont .slider {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: crimson;
+}
+.influencetobrand .slider-cont .slider img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-team .content {
+  width: 100%;
+  position: relative;
+}
+.our-team .content .members-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-team .content .members-cont .member {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.our-team .content .members-cont .member h4 {
+  display: none;
+}
+.our-team .content .members-cont .member h2 {
+  font-family: "Saira-bold";
+  opacity: 0.5;
+  writing-mode: sideways-lr;
+  font-size: clamp(20px, 15vw, 130px);
+  line-height: 1;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #00310E;
+  transition: all 0.17s ease-in-out;
+  background-color: #d4ffe0;
+  padding: 1rem;
+  cursor: pointer;
+}
+.our-team .content .members-cont #co-founder {
+  align-items: flex-end;
+}
+.our-team .content .members-cont #co-founder h2 {
+  writing-mode: sideways-rl;
+}
+.our-team .content .members-img {
+  height: 70vw;
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.our-team .content .members-img h4 {
+  font-size: 4vw;
+  color: #000;
+  font-family: "Saira-thin";
+}
+.our-team .content .members-img img {
+  height: 90%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+  margin-top: 0.3rem;
+  -o-object-position: top;
+     object-position: top;
+}
+
+@media (min-width: 768px) {
+  .our-team .content .members-cont {
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .our-team .content .members-cont .member {
+    gap: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: flex-start;
+  }
+  .our-team .content .members-cont .member h4 {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #464545;
+    font-family: "Saira-thin";
+    width: 7rem;
+    opacity: 0;
+  }
+  .our-team .content .members-cont .member h2 {
+    writing-mode: initial;
+    font-size: 6vw;
+    text-wrap: nowrap;
+    background-color: transparent;
+    padding: 0;
+  }
+  .our-team .content .members-cont #co-founder {
+    align-items: flex-start;
+  }
+  .our-team .content .members-cont #co-founder h2 {
+    writing-mode: initial;
+  }
+  .our-team .content .members-img {
+    height: 75%;
+    width: 30%;
+    left: 85%;
+  }
+  .our-team .content .members-img h4 {
+    display: none;
+  }
+  .our-team .content .members-img img {
+    height: 100%;
+    margin-top: 0;
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+@media (min-width: 1000px) {
+  .our-team .content .members-cont .member {
+    flex-direction: row;
+    align-items: center;
+  }
+  .our-team .content .members-cont .member h4 {
+    opacity: 1;
+  }
+  .our-team .content .members-cont .member h2 {
+    font-size: 5vw;
+    width: 75vw;
+    position: relative;
+    z-index: 8;
+  }
+  .our-team .content .members-cont .member h2:hover {
+    transform: translateX(50px);
+  }
+  .our-team .content .members-cont #co-founder {
+    align-items: flex-start;
+  }
+  .our-team .content .members-img {
+    height: 75%;
+    width: 30%;
+    max-width: 380px;
+    left: 85%;
+  }
+}
+.investors {
+  position: relative;
+}
+.investors .all-investors {
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.investors .all-investors .investor {
+  padding: 0.5rem 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: default;
+  position: relative;
+  flex-shrink: 0;
+  text-align: center;
+}
+.investors .all-investors .investor h3,
+.investors .all-investors .investor p {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-shadow: 0 0 10px #00310E;
+}
+.investors .all-investors .investor h3 {
+  text-wrap: nowrap;
+  font-size: clamp(8px, 7vw, 1.2rem);
+  font-family: "Saira-regular";
+}
+.investors .all-investors .investor .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.investors .all-investors .cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  z-index: 9;
+}
+.investors .all-investors .cursor img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (min-width: 1000px) {
+  .investors .all-investors {
+    gap: 6rem;
+  }
+  .investors .all-investors .cursor {
+    height: 25px;
+    width: 25px;
+  }
+}
 main {
   height: 100%;
   width: 100%;
 }
 main section {
-  padding: 0.3rem 0.5rem;
   width: 100%;
   min-height: 50%;
 }
 
-.inflencetobrand {
-  background-color: crimson;
-}
-
-.team {
-  background-color: greenyellow;
-}
-
+.our-team,
 .investors {
-  background-color: lightblue;
+  min-height: 60vh;
+  padding: 0.5rem 0.8rem;
+  padding-block: 1.5rem;
+  position: relative;
+}
+.our-team hr,
+.investors hr {
+  margin-block: 1.5rem;
+}
+.our-team hr.sticky,
+.investors hr.sticky {
+  position: sticky;
+  top: 15%;
+}
+.our-team .heading,
+.investors .heading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #F1FFF5;
+  z-index: 9;
+}
+.our-team .heading h1,
+.investors .heading h1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 1;
+  color: #464545;
+  font-size: clamp(20px, 16vw, 130px);
 }
 
+@media (min-width: 768px) {
+  .our-team,
+  .investors {
+    padding: 0.5rem 1.5rem;
+    padding-block: 2.5rem;
+  }
+  .our-team hr,
+  .investors hr {
+    margin-block: 2.5rem;
+  }
+  .our-team hr.sticky,
+  .investors hr.sticky {
+    top: 16%;
+  }
+  .our-team .heading h1,
+  .investors .heading h1 {
+    font-size: clamp(20px, 12vw, 130px);
+  }
+}
+@media (min-width: 1000px) {
+  .our-team,
+  .investors {
+    padding: 0.8rem 3.1rem;
+    padding-block: 2.5rem;
+  }
+  .our-team hr.sticky,
+  .investors hr.sticky {
+    top: 18%;
+  }
+}
 .doubts {
   background-color: green;
 }
 
-@media (min-width: 768px) {
-  main section {
-    padding: 0.5rem 1.5rem;
-  }
-}
-@media (min-width: 1000px) {
-  main section {
-    padding: 0.8rem 3.1rem;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -163,13 +492,11 @@ body {
 
 body {
   background-color: #F1FFF5;
-  position: relative;
 }
 
 #root {
-  padding-top: 2.7rem;
-  height: 100%;
   width: 100%;
+  position: relative;
 }
 
 @media (min-width: 425px) {
@@ -183,19 +510,33 @@ body {
   }
 }
 .header {
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  padding-block: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   z-index: 999;
   width: 100%;
   transition: top 0.25s ease-in-out;
+}
+.header:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.02);
+  top: 0;
+  left: 0;
+  z-index: -1;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.header.hide {
+  top: -100px;
 }
 .header .logo {
   display: flex;
@@ -214,12 +555,13 @@ body {
 }
 .header nav {
   position: fixed;
-  top: 100%;
-  opacity: 1;
+  bottom: -100%;
+  opacity: 0;
   left: 50%;
   z-index: 999;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #29FF65;
+  background-color: rgba(0, 49, 14, 0.3);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
   min-height: 30vh;
@@ -234,6 +576,10 @@ body {
   gap: 1rem;
   border-radius: 3rem;
   transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in;
+}
+.header nav.active {
+  bottom: 0%;
+  opacity: 1;
 }
 .header nav .close-menu-btn {
   width: 30%;
@@ -275,10 +621,6 @@ body {
   background-color: #00310E;
   color: white;
 }
-.header nav.active {
-  bottom: 0%;
-  opacity: 1;
-}
 .header .open-menu-btn {
   border-radius: 1.5rem;
   font-family: "Saira-regular";
@@ -292,15 +634,6 @@ body {
   padding: 0.15rem 1.1rem;
 }
 
-.header.show {
-  position: fixed;
-  top: 0;
-}
-
-.header.hide {
-  top: -100px;
-}
-
 @media (min-width: 425px) {
   .header {
     padding: 0.5rem 1.5rem;
@@ -309,6 +642,9 @@ body {
 @media (min-width: 768px) {
   .header {
     padding-block: 0.5rem;
+  }
+  .header:before {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   }
   .header .logo span {
     font-size: 1.3rem;
@@ -327,17 +663,21 @@ body {
     opacity: 1;
     transform: translateX(0);
     background-color: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     flex-direction: row;
     justify-content: flex-end;
     padding-block: 0;
     border-radius: 0;
+    height: -moz-fit-content;
+    height: fit-content;
     min-height: initial;
     gap: 2rem;
   }
   .header nav .nav-item {
     color: #464545;
     font-family: "Saira-light";
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   .header nav .close-menu-btn {
     display: none;

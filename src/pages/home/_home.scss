@@ -2,6 +2,7 @@
 @import '../../components/marque/marque';
 @import '../../components/influencetobrand/influencetobrand';
 @import '../../components/ourteam/ourteam';
+@import '../../components/ourinvestors/ourinvestors';
 
 main {
     height: 100%;
@@ -20,12 +21,22 @@ main {
     padding-block: 1.5rem;
     position: relative;
 
+    hr {
+        margin-block: 1.5rem;
+    }
+
+    hr.sticky {
+        position: sticky;
+        top: 15%;
+    }
+
     .heading {
         position: sticky;
         top: 0;
         left: 0;
         background-color: $theme-light-color;
         z-index: 9;
+        // opacity: 0.2;
 
         h1 {
             display: flex;
@@ -34,12 +45,10 @@ main {
             flex-wrap: wrap;
             line-height: 1;
             color: $headings-color;
-            font-size: clamp(20px, 14vw, 130px);
+            font-size: clamp(20px, 16vw, 130px);
         }
     }
 }
-
-
 
 
 // width : 768px 
@@ -49,6 +58,14 @@ main {
     .investors {
         padding: $padding-tab;
         padding-block: 2.5rem;
+
+        hr {
+            margin-block: 2.5rem;
+        }
+
+        hr.sticky {
+            top: 16%;
+        }
 
         .heading {
             h1 {
@@ -66,6 +83,10 @@ main {
     .investors {
         padding: $padding-desk;
         padding-block: 2.5rem;
+
+        hr.sticky {
+            top: 18%;
+        }
     }
 }
 
@@ -75,13 +96,6 @@ main {
 
 
 
-
-
-
-
-.investors {
-    background-color: lightblue;
-}
 
 .doubts {
     background-color: green;

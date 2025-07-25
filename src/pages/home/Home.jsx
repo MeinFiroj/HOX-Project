@@ -2,6 +2,8 @@ import InfluenceToBrand from "../../components/influencetobrand/InfluenceToBrand
 import Hero from "../../components/hero/Hero";
 import OurTeam from "../../components/ourteam/OurTeam";
 import OurInvestors from "../../components/ourinvestors/OurInvestors";
+import Doubts from "../../components/gotdoubts/Doubts";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -10,14 +12,8 @@ const Home = () => {
       <InfluenceToBrand />
       <OurTeam />
       <OurInvestors />
-
-      {/* <section className="doubts">
-        <div className="heading">
-          <h1>Got Doubts</h1>
-        </div>
-      </section>
-
-      <footer></footer> */}
+      <Doubts />
+      <Footer />
     </main>
   );
 };

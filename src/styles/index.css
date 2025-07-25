@@ -399,6 +399,76 @@
     width: 25px;
   }
 }
+.doubts {
+  background-color: #d4ffe0;
+  padding: 0.5rem 0.8rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.doubts .heading h1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  line-height: 1;
+  color: #464545;
+  font-size: clamp(20px, 16vw, 130px);
+}
+.doubts .para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doubts .para p {
+  font-size: 1rem;
+  color: #464545;
+  text-align: start;
+}
+.doubts .contacts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.doubts .contacts a button {
+  border-radius: 1.5rem;
+  font-family: "Saira-regular";
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-color: #00310E;
+  padding: 0.2rem 1rem;
+  background-color: #00310E;
+  color: white;
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+.doubts .contacts a button:hover {
+  background-color: transparent;
+  color: #00310E;
+}
+
+@media (min-width: 768px) {
+  .doubts {
+    padding: 0.5rem 1.5rem;
+  }
+  .doubts .para p {
+    font-size: 1.12rem;
+  }
+  .doubts .contacts a button {
+    padding: 0.3rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1000px) {
+  .doubts {
+    padding: 0.8rem 3.1rem;
+    padding-block: 2rem;
+  }
+  .doubts .para p {
+    font-size: 1.3rem;
+  }
+}
 main {
   height: 100%;
   width: 100%;
@@ -473,10 +543,6 @@ main section {
     top: 18%;
   }
 }
-.doubts {
-  background-color: green;
-}
-
 * {
   margin: 0;
   padding: 0;

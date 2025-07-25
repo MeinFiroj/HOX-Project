@@ -1,0 +1,91 @@
+.doubts {
+    background-color: $theme-med-color;
+    padding: $padding-mob;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .heading {
+
+        h1 {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            line-height: 1;
+            color: $headings-color;
+            font-size: clamp(20px, 16vw, 130px);
+        }
+    }
+
+    .para {
+        @include items-center();
+        justify-content: center;
+
+        p {
+            font-size: $normal-txt-sz;
+            color: $headings-color;
+            text-align: start;
+        }
+    }
+
+    .contacts {
+        @include items-center();
+        gap: 1rem;
+        justify-content: flex-end;
+
+        a {
+            button {
+                @include base-btn();
+                font-size: .8rem;
+                border-color: $theme-drk-color;
+                padding: .2rem 1rem;
+                background-color: $theme-drk-color;
+                color: white;
+                transition: color .12s ease, background-color .12s ease;
+                
+                &:hover{
+                    background-color: transparent;
+                    color: $theme-drk-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width : $med-screens) {
+    .doubts {
+        padding: $padding-tab;
+
+        .para {
+
+            p {
+                font-size: 1.12rem;
+            }
+        }
+
+        .contacts{
+            a{
+                button{
+                    padding: .3rem 1.2rem;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width : $large-screens) {
+    .doubts {
+        padding: $padding-desk;
+        padding-block: 2rem;
+
+        .para {
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

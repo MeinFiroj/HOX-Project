@@ -3,6 +3,9 @@
 @import '../../components/influencetobrand/influencetobrand';
 @import '../../components/ourteam/ourteam';
 @import '../../components/ourinvestors/ourinvestors';
+@import '../../components/gotdoubts/doubts';
+@import '../../components/footer/footer';
+
 
 main {
     height: 100%;
@@ -90,13 +93,3 @@ main {
     }
 }
 
-
-
-
-
-
-
-
-.doubts {
-    background-color: green;
-}

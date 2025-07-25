@@ -1,24 +1,38 @@
 .influencetobrand {
 
-    border: 2px solid red;
-
     .slider-cont {
         width: 100%;
         height: 100vh;
-        overflow-y: hidden;
         overflow-x: auto;
         padding-top: 3.5rem;
+        position: relative;
 
         .slider {
             height: 100%;
             width: fit-content;
-            // border: 3px solid green;
-            background-color: crimson;
+            display: flex;
 
-            img{
+            img {
                 height: 100%;
-                object-fit: cover;
+                object-fit: fill;
+                display: block;
             }
+        }
+    }
+}
+
+@media (min-width : 768px) {
+    .influencetobrand {
+        .slider-cont {
+            overflow: hidden;
+        }
+    }
+}
+
+@media (min-width : $large-screens) {
+    .influencetobrand {
+        .slider-cont {
+            height: 100vh;
         }
     }
 }

@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="links">
           <h4>Quick Links</h4>
           {quickLinks.map((link, idx) => (
-            <NavLink className={"link"} to={link.link}>
+            <NavLink className={"link"} key={idx} to={link.link}>
               {link.text}
             </NavLink>
           ))}
@@ -53,9 +53,9 @@ const Footer = () => {
         <div className="connect">
           <h4>Connect With Us</h4>
           <div className="icons">
-            {followUs.map((acc) => {
+            {followUs.map((acc,idx) => {
               return (
-                <a className="icon" target="_blank" href={acc.link}>
+                <a className="icon" target="_blank" key={idx} href={acc.link}>
                   <img src={acc.image} className={acc.class} alt="" />
                 </a>
               );

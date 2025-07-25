@@ -7,7 +7,7 @@ const Footer = () => {
     { text: "Privacy Policy", link: "/privacy-policy" },
     { text: "Terms of Service", link: "/terms" },
     { text: "Contact Us", link: "/contact" },
-    { text: "Become a Partner", link: "/partner" },
+    { text: "Become a Partner", link: "/become-a-partner" },
   ];
 
   const followUs = [

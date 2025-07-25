@@ -1,0 +1,100 @@
+.hox-launch {
+    padding: $padding-mob;
+    padding-block: 3rem 2rem;
+    min-height: 95vh;
+
+    h1{
+        font-size: 2rem;
+        color: $headings-color;
+    }
+    .launch-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-block: 1rem;
+        background-color: $theme-light-color;
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .launch-card {
+            background-color: $theme-med-color;
+            color: $theme-drk-color;
+            border: 1px solid #27272a;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .card-img {
+                width: 100%;
+                height: 13rem;
+                object-fit: cover;
+
+                @media (min-width: 640px) {
+                    height: 16rem;
+                }
+
+                @media (min-width: 768px) {
+                    height: 18rem;
+                }
+            }
+
+            .card-content {
+                padding: 1rem;
+
+                .card-title {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: $theme-drk-color;
+                }
+
+                .card-role {
+                    font-size: 0.875rem;
+                    color: $theme-drk-color;
+                }
+
+                .card-quote {
+                    margin-top: 0.5rem;
+                    font-weight: 700;
+                }
+
+                .card-desc {
+                    margin-top: 0.5rem;
+                    font-size: 0.875rem;
+                    color: $theme-drk-color;
+                }
+
+                .coming-soon {
+                    text-align: center;
+                    margin-top: 2.5rem;
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                    color: $theme-drk-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width : $med-screens) {
+    .hox-launch{
+        padding: $padding-tab;
+    }
+}
+@media (min-width : $large-screens) {
+    .hox-launch{
+        padding: $padding-desk;
+    }
+}

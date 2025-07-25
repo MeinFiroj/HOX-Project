@@ -1,0 +1,120 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: transparent;
+
+    .popup {
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        padding: 2rem;
+        border-radius: .2rem;
+        color: #464545;
+        min-width: 300px;
+        width: 80%;
+        height: 60%;
+        border: 1px solid rgba(0, 0, 0, 0.518);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        form {
+            width: 100%;
+            height: 50%;
+
+            input {
+                padding: .5rem 1rem;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.518);
+                color: $theme-drk-color;
+                background-color: transparent;
+                box-shadow: $light-box-shadow;
+                margin-top: .8rem;
+                width: 100%;
+                font-size: 1rem;
+
+                &::placeholder {
+                    color: $theme-drk-color;
+                }
+            }
+
+            button {
+                @include base-btn();
+                padding: .3rem 1.2rem;
+                margin-top: 2rem;
+                border: none;
+                font-family: "Saira-med";
+                box-shadow: $light-box-shadow;
+            }
+
+            .submit {
+                background-color: $theme-med-color;
+                margin-right: .5rem;
+            }
+
+            .cancel {
+                background-color: rgb(252, 168, 185);
+            }
+        }
+    }
+}
+
+@media (min-width : $med-screens) {
+    .overlay {
+
+        .popup {
+            width: 60%;
+            height: fit-content;
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width : $large-screens) {
+    .overlay {
+        .popup {
+            border-radius: 1rem;
+            width: 40%;
+            h2 {
+                font-size: 3rem;
+            }
+
+            form {
+
+                // height: 80%;
+                input {
+                    padding: 1rem 2rem;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.218);
+                    margin-top: 1.5rem;
+                }
+
+                button {
+                    padding: .5rem 1.8rem;
+                    font-size: 1rem;
+                }
+
+                .submit {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

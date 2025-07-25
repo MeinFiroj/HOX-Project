@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { useEffect, useState } from "react";
 import closeMenuBtn from "../../assets/icons/down-arrow.svg";
+import { useLogin } from "../../context/LoginContext";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -31,6 +32,12 @@ const Navbar = () => {
 
   const closeMenu = () => setIsActive(false);
 
+  const { openLogin } = useLogin();
+  const LoginHandler = () => {
+    closeMenu();
+    openLogin();
+  };
+
   return (
     <header className={`header ${showHeader ? "" : "hide"}`}>
       <div className="logo">
@@ -38,25 +45,25 @@ const Navbar = () => {
         <img src="/hox-logo.webp" alt="X logo" />
       </div>
       <nav className={isActive ? "active" : ""}>
-        <NavLink
+        <NavLink onClick={closeMenu}
           className={`${(isActive) => (isActive ? "active" : "")}  nav-item`}
           to={"/home"}
         >
           Home
         </NavLink>
-        <NavLink
+        <NavLink onClick={closeMenu}
           className={`${(isActive) => (isActive ? "active" : "")}  nav-item`}
           to={"/hox-launch"}
         >
           HOX Launch
         </NavLink>
-        <NavLink
+        <NavLink onClick={closeMenu}
           className={`${(isActive) => (isActive ? "active" : "")}  nav-item`}
           to={"/become-a-partner"}
         >
           Become a Partner
         </NavLink>
-        <NavLink
+        <NavLink onClick={closeMenu}
           className={`${(isActive) => (isActive ? "active" : "")}  nav-item`}
           to={"/contact"}
         >
@@ -67,7 +74,9 @@ const Navbar = () => {
           <img src={closeMenuBtn} />
         </button>
 
-        <NavLink className="login-btn">Login</NavLink>
+        <NavLink onClick={LoginHandler} className="login-btn">
+          Login
+        </NavLink>
       </nav>
 
       <button onClick={navbarToggler} className="open-menu-btn">

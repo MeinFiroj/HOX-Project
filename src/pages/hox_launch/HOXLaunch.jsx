@@ -34,7 +34,7 @@ const HOXLaunch = () => {
 
   return (
     <div className="hox-launch">
-      <h1>HOX Launch</h1>
+      <h1>HOX LAUNCH</h1>
       <div className="launch-cards">
         {cards.map((card, i) => (
           <a
@@ -44,7 +44,7 @@ const HOXLaunch = () => {
             rel="noopener noreferrer"
             className="launch-card"
           >
-            <img src={card.image} alt={card.name} className="card-img" />
+            <img loading="lazy" src={card.image} alt={card.name} className="card-img" />
             <div className="card-content">
               <h2 className="card-title">{card.name}</h2>
               {card.role !== "?" ? (

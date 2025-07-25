@@ -60,7 +60,7 @@ const OurInvestors = () => {
   const [currentImg, setCurrentImg] = useState(null);
 
   const showImg = (e) => {
-    setCurrentImg(<img src={e.target.dataset.img} />);
+    setCurrentImg(<img loading="lazy" src={e.target.dataset.img} />);
     gsap.to(".cursor", {
       scale: 10,
     });
@@ -82,7 +82,7 @@ const OurInvestors = () => {
     gsap.to(".cursor", {
       left: x,
       top: y,
-      duration: 1.1,
+      duration: 0.6,
     });
   };
 

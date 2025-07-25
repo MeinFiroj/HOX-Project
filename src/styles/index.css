@@ -89,8 +89,8 @@
 @media (min-width: 1000px) {
   .hero {
     padding: 0.8rem 3.1rem;
-    padding-block: 2.5rem;
-    min-height: 100%;
+    padding-block: 3rem 2.5rem;
+    min-height: 100vh;
   }
   .hero .headings h1 {
     font-size: 8.8rem;
@@ -580,6 +580,7 @@ footer .content .connect .input-cont button {
   background-color: #d4ffe0;
   border: none;
   font-family: "Saira-med";
+  cursor: pointer;
 }
 footer hr {
   opacity: 0.3;
@@ -724,6 +725,288 @@ main section {
     top: 18%;
   }
 }
+.joining-form {
+  background-color: #d4ffe0;
+  padding: 0.5rem 0.8rem;
+  position: relative;
+}
+.joining-form .close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.joining-form .close-btn img {
+  width: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: scale 0.1s ease;
+}
+.joining-form .close-btn img:hover {
+  scale: 1.1;
+}
+.joining-form .heading {
+  padding: 2rem 0;
+}
+.joining-form .heading h2 {
+  font-size: 1.5rem;
+  color: #464545;
+}
+.joining-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.joining-form form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.joining-form form .form-group input,
+.joining-form form .form-group textarea {
+  width: 100%;
+  padding: 5px;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+}
+.joining-form form .form-group input.radio {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.joining-form form .form-group label {
+  font-family: "Saira-med";
+}
+.joining-form form .form-group span {
+  font-size: 0.7rem;
+  color: darkred;
+}
+.joining-form form .form-group .radio-group {
+  display: flex;
+  flex-direction: column;
+}
+.joining-form form .form-group .radio-group input {
+  margin-right: 0.5rem;
+}
+.joining-form form .form-group .radio-group label {
+  font-family: "Saira-regular";
+}
+.joining-form form .form-actions {
+  margin-top: 2rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.joining-form form .form-actions button {
+  padding: 0.3rem 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: lightblue;
+  font-family: "Saira-med";
+  cursor: pointer;
+  transition: filter 0.16s;
+}
+.joining-form form .form-actions button:hover {
+  filter: brightness(0.8);
+}
+.joining-form form .form-actions button[type=reset] {
+  background-color: lightcoral;
+}
+
+@media (min-width: 640px) {
+  .joining-form {
+    padding: 0.5rem 1.5rem;
+  }
+  .joining-form form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+  }
+  .joining-form form .form-group {
+    width: 45%;
+  }
+}
+@media (min-width: 1000px) {
+  .joining-form {
+    padding: 0.8rem 3.1rem;
+  }
+  .joining-form form .form-group {
+    width: 48%;
+  }
+  .joining-form form .form-group input, .joining-form form .form-group textarea {
+    padding: 1rem 1rem;
+  }
+  .joining-form form .form-actions button {
+    padding: 0.6rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+.be-partner {
+  padding: 0.5rem 0.8rem;
+  padding-block: 4rem 2rem;
+  min-height: 80vh;
+}
+.be-partner h1 {
+  color: #464545;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+.be-partner p {
+  color: #464545;
+}
+.be-partner .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.be-partner .contacts a {
+  display: inline-block;
+}
+.be-partner .contacts a button {
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #464545;
+}
+.be-partner .contacts a button:hover {
+  text-decoration: underline;
+}
+.be-partner .contacts a.whatsapp {
+  display: none;
+}
+.be-partner .joining-btn {
+  border-radius: 1.5rem;
+  font-family: "Saira-regular";
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+  background-color: #00310E;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border: 1px solid #00310E;
+}
+.be-partner .joining-btn:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+.be-partner hr {
+  margin-block: 2rem;
+}
+
+@media (min-width: 768px) {
+  .be-partner {
+    padding: 0.5rem 1.5rem;
+    padding-block: 5rem 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .be-partner {
+    padding: 0.8rem 3.1rem;
+    padding-block: 6rem 2rem;
+  }
+}
+.contact,
+.disclaimer,
+.privacy-policy,
+.terms {
+  padding: 0.5rem 0.8rem;
+  padding-block: 4rem 1rem;
+  min-height: 80vh;
+}
+.contact h1,
+.disclaimer h1,
+.privacy-policy h1,
+.terms h1 {
+  font-size: 2rem;
+  color: #464545;
+}
+.contact h3,
+.disclaimer h3,
+.privacy-policy h3,
+.terms h3 {
+  font-size: 1.4rem;
+  color: #464545;
+  margin-block: 1rem 0.5rem;
+}
+.contact p,
+.disclaimer p,
+.privacy-policy p,
+.terms p {
+  font-size: 1rem;
+  color: #8E8A8A;
+}
+.contact .p,
+.disclaimer .p,
+.privacy-policy .p,
+.terms .p {
+  margin-block: 2rem;
+}
+.contact a,
+.disclaimer a,
+.privacy-policy a,
+.terms a {
+  color: #464545;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.contact a:hover,
+.disclaimer a:hover,
+.privacy-policy a:hover,
+.terms a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.contact hr,
+.disclaimer hr,
+.privacy-policy hr,
+.terms hr {
+  margin-block: 3rem;
+}
+
+.disclaimer p,
+.privacy-policy p,
+.terms p {
+  margin-block: 1rem;
+  font-size: 1.2rem;
+}
+
+.terms h2 {
+  color: #464545;
+}
+
+@media (min-width: 768px) {
+  .contact,
+  .disclaimer,
+  .privacy-policy,
+  .terms {
+    padding: 0.5rem 1.5rem;
+    padding-block: 4rem 1rem;
+  }
+  .disclaimer p {
+    margin-block: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .contact,
+  .disclaimer,
+  .privacy-policy,
+  .terms {
+    padding: 0.8rem 3.1rem;
+    padding-block: 5rem 1rem;
+  }
+}
 .hox-launch {
   padding: 0.5rem 0.8rem;
   padding-block: 3rem 2rem;
@@ -812,11 +1095,13 @@ main section {
 @media (min-width: 768px) {
   .hox-launch {
     padding: 0.5rem 1.5rem;
+    padding-block: 4rem 2rem;
   }
 }
 @media (min-width: 1000px) {
   .hox-launch {
     padding: 0.8rem 3.1rem;
+    padding-block: 5rem 2rem;
   }
 }
 .overlay {
@@ -924,6 +1209,23 @@ main section {
     margin-right: 1rem;
   }
 }
+.career {
+  padding: 0.5rem 0.8rem;
+  padding-block: 4rem 1rem;
+  background-color: #d4ffe0;
+}
+
+@media (min-width: 768px) {
+  .career {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .career {
+    padding: 0.8rem 3.1rem;
+    padding-block: 4rem 1rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -944,15 +1246,4 @@ body {
 #root {
   width: 100%;
   position: relative;
-}
-
-@media (min-width: 425px) {
-  #root {
-    padding-top: 3.1rem;
-  }
-}
-@media (min-width: 1000px) {
-  #root {
-    padding-top: 4rem;
-  }
 }

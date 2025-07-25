@@ -91,10 +91,12 @@
 @media (min-width : $med-screens) {
     .hox-launch{
         padding: $padding-tab;
+        padding-block: 4rem 2rem;
     }
 }
 @media (min-width : $large-screens) {
     .hox-launch{
         padding: $padding-desk;
+        padding-block: 5rem 2rem;
     }
 }

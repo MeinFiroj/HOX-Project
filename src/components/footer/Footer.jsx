@@ -56,7 +56,7 @@ const Footer = () => {
             {followUs.map((acc,idx) => {
               return (
                 <a className="icon" target="_blank" key={idx} href={acc.link}>
-                  <img src={acc.image} className={acc.class} alt="" />
+                  <img loading="lazy" src={acc.image} className={acc.class} alt="" />
                 </a>
               );
             })}

@@ -29,7 +29,7 @@ const useHorizontalScroll = () => {
           trigger: sliderCont,
           start: "top top",
           end: () => `+=${totalWidth}`,
-          scrub: 1,
+          scrub: 0.5,
           pin: true,
           anticipatePin: 1,
         },

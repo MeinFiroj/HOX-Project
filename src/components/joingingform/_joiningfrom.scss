@@ -1,0 +1,147 @@
+.joining-form {
+    background-color: $theme-med-color;
+    padding: $padding-mob;
+    position: relative;
+
+    .close-btn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        img{
+            width: 25px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            transition: scale .1s ease;
+
+            &:hover{
+                scale: 1.1;
+            }
+        }
+    }
+
+    .heading {
+        padding: 2rem 0;
+
+        h2 {
+            font-size: 1.5rem;
+            color: $headings-color;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 5px;
+                max-width: 100%;
+                border: none;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                border-radius: .2rem;
+            }
+
+            input.radio {
+                width: fit-content;
+            }
+
+            label {
+                font-family: "Saira-med";
+            }
+
+            span {
+                font-size: .7rem;
+                color: darkred;
+            }
+
+
+            .radio-group {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin-right: .5rem;
+                }
+
+                label {
+                    font-family: 'Saira-regular';
+                }
+            }
+        }
+
+        .form-actions {
+            margin-top: 2rem;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+
+            button {
+                padding: .3rem 1rem;
+                border-radius: .4rem;
+                border: none;
+                background-color: lightblue;
+                font-family: 'Saira-med';
+                cursor: pointer;
+                transition: filter .16s;
+
+                &:hover{
+                    filter: brightness(0.8);
+                }
+            }
+
+            button[type="reset"] {
+                background-color: lightcoral;
+            }
+
+        }
+    }
+}
+
+@media (min-width : 640px) {
+    .joining-form {
+        padding: $padding-tab;
+        form {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+
+            .form-group {
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media (min-width : $large-screens) {
+    .joining-form{
+        padding: $padding-desk;
+        form{
+            .form-group{
+                width: 48%;
+
+                input,textarea{
+                    padding: 1rem 1rem;
+                }
+            }
+            .form-actions{
+                button{
+                    padding: .6rem 2rem;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

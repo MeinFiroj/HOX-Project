@@ -1,0 +1,18 @@
+.career {
+    padding: $padding-mob;
+    padding-block: 4rem 1rem;
+    background-color: $theme-med-color;
+}
+
+@media (min-width : $med-screens) {
+    .career {
+        padding: $padding-tab;
+    }
+}
+
+@media (min-width : $large-screens) {
+    .career {
+        padding: $padding-desk;
+        padding-block: 4rem 1rem;
+    }
+}

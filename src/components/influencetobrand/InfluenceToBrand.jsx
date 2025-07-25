@@ -1,5 +1,5 @@
 import Marque from "../../components/marque/Marque";
-import image from "../../assets/images/dealingprocess.png";
+import image from "../../assets/images/dealingprocess.webp";
 import useHorizontalScroll from "../onscrollslider/useHorizontalScroll";
 
 const InfluenceToBrand = () => {

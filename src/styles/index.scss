@@ -9,6 +9,7 @@
 @import "../pages/hox_launch/hoxlaunch";
 @import "../pages/page_not_found/pagenotfound";
 @import "../components/loginpopup/login";
+@import "../pages/career/careerform";
 
 * {
     margin: 0;
@@ -30,16 +31,4 @@ body {
 #root {
     width: 100%;
     position: relative;
-}
-
-@media (min-width : $small-screens) {
-    #root {
-        padding-top: 3.1rem;
-    }
-}
-
-@media (min-width : $large-screens) {
-    #root {
-        padding-top: 4rem;
-    }
 }

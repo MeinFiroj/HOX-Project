@@ -1,7 +1,7 @@
 .doubts {
     background-color: $theme-med-color;
     padding: $padding-mob;
-    padding-block: 1rem;
+    padding-block: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -79,7 +79,7 @@
 @media (min-width : $large-screens) {
     .doubts {
         padding: $padding-desk;
-        padding-block: 2rem;
+        padding-block: 3rem;
 
         .para {
 

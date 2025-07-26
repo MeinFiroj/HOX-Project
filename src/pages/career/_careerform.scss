@@ -14,6 +14,26 @@
 @media (min-width : $large-screens) {
     .career {
         padding: $padding-desk;
-        padding-block: 4rem 1rem;
+        padding-block: 5rem 1rem;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        .form-group.options {
+            width: 100%;
+
+            .radio-group {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin-top: .2rem;
+
+                label {
+                    flex-shrink: 0;
+
+                }
+            }
+        }
     }
 }

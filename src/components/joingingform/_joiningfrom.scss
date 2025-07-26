@@ -1,4 +1,4 @@
-.joining-form {
+.joining-form, .career {
     background-color: $theme-med-color;
     padding: $padding-mob;
     position: relative;
@@ -111,7 +111,7 @@
 }
 
 @media (min-width : 640px) {
-    .joining-form {
+    .joining-form, .career {
         padding: $padding-tab;
         form {
             flex-direction: row;
@@ -126,7 +126,7 @@
 }
 
 @media (min-width : $large-screens) {
-    .joining-form{
+    .joining-form, .career{
         padding: $padding-desk;
         form{
             .form-group{

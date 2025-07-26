@@ -728,17 +728,17 @@ main section {
     top: 18%;
   }
 }
-.joining-form {
+.joining-form, .career {
   background-color: #d4ffe0;
   padding: 0.5rem 0.8rem;
   position: relative;
 }
-.joining-form .close-btn {
+.joining-form .close-btn, .career .close-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.joining-form .close-btn img {
+.joining-form .close-btn img, .career .close-btn img {
   width: 25px;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -747,28 +747,29 @@ main section {
   right: 15px;
   transition: scale 0.1s ease;
 }
-.joining-form .close-btn img:hover {
+.joining-form .close-btn img:hover, .career .close-btn img:hover {
   scale: 1.1;
 }
-.joining-form .heading {
+.joining-form .heading, .career .heading {
   padding: 2rem 0;
 }
-.joining-form .heading h2 {
+.joining-form .heading h2, .career .heading h2 {
   font-size: 1.5rem;
   color: #464545;
 }
-.joining-form form {
+.joining-form form, .career form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.joining-form form .form-group {
+.joining-form form .form-group, .career form .form-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .joining-form form .form-group input,
-.joining-form form .form-group textarea {
+.joining-form form .form-group textarea, .career form .form-group input,
+.career form .form-group textarea {
   width: 100%;
   padding: 5px;
   max-width: 100%;
@@ -776,28 +777,28 @@ main section {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 0.2rem;
 }
-.joining-form form .form-group input.radio {
+.joining-form form .form-group input.radio, .career form .form-group input.radio {
   width: -moz-fit-content;
   width: fit-content;
 }
-.joining-form form .form-group label {
+.joining-form form .form-group label, .career form .form-group label {
   font-family: "Saira-med";
 }
-.joining-form form .form-group span {
+.joining-form form .form-group span, .career form .form-group span {
   font-size: 0.7rem;
   color: darkred;
 }
-.joining-form form .form-group .radio-group {
+.joining-form form .form-group .radio-group, .career form .form-group .radio-group {
   display: flex;
   flex-direction: column;
 }
-.joining-form form .form-group .radio-group input {
+.joining-form form .form-group .radio-group input, .career form .form-group .radio-group input {
   margin-right: 0.5rem;
 }
-.joining-form form .form-group .radio-group label {
+.joining-form form .form-group .radio-group label, .career form .form-group .radio-group label {
   font-family: "Saira-regular";
 }
-.joining-form form .form-actions {
+.joining-form form .form-actions, .career form .form-actions {
   margin-top: 2rem;
   display: flex;
   align-content: center;
@@ -805,7 +806,7 @@ main section {
   gap: 1rem;
   width: 100%;
 }
-.joining-form form .form-actions button {
+.joining-form form .form-actions button, .career form .form-actions button {
   padding: 0.3rem 1rem;
   border-radius: 0.4rem;
   border: none;
@@ -814,37 +815,37 @@ main section {
   cursor: pointer;
   transition: filter 0.16s;
 }
-.joining-form form .form-actions button:hover {
+.joining-form form .form-actions button:hover, .career form .form-actions button:hover {
   filter: brightness(0.8);
 }
-.joining-form form .form-actions button[type=reset] {
+.joining-form form .form-actions button[type=reset], .career form .form-actions button[type=reset] {
   background-color: lightcoral;
 }
 
 @media (min-width: 640px) {
-  .joining-form {
+  .joining-form, .career {
     padding: 0.5rem 1.5rem;
   }
-  .joining-form form {
+  .joining-form form, .career form {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.8rem;
   }
-  .joining-form form .form-group {
+  .joining-form form .form-group, .career form .form-group {
     width: 45%;
   }
 }
 @media (min-width: 1000px) {
-  .joining-form {
+  .joining-form, .career {
     padding: 0.8rem 3.1rem;
   }
-  .joining-form form .form-group {
+  .joining-form form .form-group, .career form .form-group {
     width: 48%;
   }
-  .joining-form form .form-group input, .joining-form form .form-group textarea {
+  .joining-form form .form-group input, .joining-form form .form-group textarea, .career form .form-group input, .career form .form-group textarea {
     padding: 1rem 1rem;
   }
-  .joining-form form .form-actions button {
+  .joining-form form .form-actions button, .career form .form-actions button {
     padding: 0.6rem 2rem;
     font-size: 1.1rem;
   }
@@ -1263,7 +1264,22 @@ main section {
 @media (min-width: 1000px) {
   .career {
     padding: 0.8rem 3.1rem;
-    padding-block: 4rem 1rem;
+    padding-block: 5rem 1rem;
+  }
+  .career h1 {
+    margin-bottom: 1rem;
+  }
+  .career .form-group.options {
+    width: 100%;
+  }
+  .career .form-group.options .radio-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 0.2rem;
+  }
+  .career .form-group.options .radio-group label {
+    flex-shrink: 0;
   }
 }
 * {

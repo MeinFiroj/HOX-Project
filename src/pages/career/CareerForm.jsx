@@ -13,6 +13,7 @@ const CareerForm = () => {
 
   return (
     <div className="career">
+      <h1>Contact Information for House of X</h1>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label>Name *</label>
@@ -33,64 +34,20 @@ const CareerForm = () => {
           {errors.email && <span>This field is required</span>}
         </div>
 
-        <div className="form-group">
-          <label>Phone Number *</label>
-          <input
-            type="tel"
-            {...register("phone", { required: true })}
-            placeholder="Enter your Contact number"
-          />
-          {errors.phone && <span>This field is required</span>}
-        </div>
-
-        <div className="form-group">
-          <label>Company Details *</label>
-          <input
-            {...register("companyDetails", { required: true })}
-            placeholder="Company Details"
-          />
-          {errors.companyDetails && <span>This field is required</span>}
-        </div>
-
-        <div className="form-group">
-          <label>Product and Service Offering *</label>
-          <input
-            {...register("productOffering", { required: true })}
-            placeholder="Product and Service Offering"
-          />
-          {errors.productOffering && <span>This field is required</span>}
-        </div>
-
-        <div className="form-group">
-          <label>Expertise and Experience *</label>
-          <textarea
-            rows={3}
-            {...register("expertise", { required: true })}
-            placeholder="Expertise and Experience"
-          ></textarea>
-          {errors.expertise && <span>This field is required</span>}
-        </div>
-
-        <div className="form-group">
-          <label>Collaboration Expectations</label>
-          <textarea
-            rows={2}
-            {...register("expectations")}
-            placeholder="Collaboration Expectations"
-          ></textarea>
-        </div>
-
-        <div className="form-group">
-          <label>What is your primary role or area of expertise? *</label>
+        <div className="form-group options">
+          <label>Role you are applying for *</label>
           <div className="radio-group">
             {[
-              "Vendor",
-              "Sourcing Mediator",
-              "Sourcing Partner",
-              "Marketing & Advertising Service Provider",
-              "Manufacturer",
-              "Logistics and Operations",
-              "Other",
+              "VP Operations and Supply Chain ( 5+ years Experience )",
+              "VP Buying and Sourcing ( 5+ years Experience )",
+              "Founders' Office - Operations Executive ( 1-3 years Experience )",
+              "Founders' Office - HR ( 1-3 years Experience )",
+              "Junior UI/UX Designer (1-3 years Experience)",
+              "INTERN - UI/UX Designer",
+              "EIR - BRAND MANAGER (2+ years Experience)",
+              "Videographer and Editor (2+ years Experience)",
+              "Senior Graphic Designer (2+ Years Work Experience)",
+              "Other:",
             ].map((role) => (
               <label key={role}>
                 <input

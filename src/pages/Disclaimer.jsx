@@ -1,6 +1,7 @@
+import usePageTitle from "../hooks/usePageTitle";
 
 const Disclaimer = () => {
-  
+  usePageTitle("Disclaimer | HOX");
   return (
     <div className="disclaimer">
       <h1>Disclaimer for HOUSE OF X</h1>

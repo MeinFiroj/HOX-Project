@@ -8,6 +8,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Disclaimer from "../pages/Disclaimer";
 import JoingingForm from "../components/joingingform/JoingingForm";
 import CareerForm from "../pages/career/CareerForm";
+import PageNotFound from "../pages/page_not_found/PageNotFound";
 
 const MainRoutes = () => {
   return (
@@ -27,6 +28,9 @@ const MainRoutes = () => {
           element={<JoingingForm />}
         />
       </Route>
+
+      <Route path="*" element={<PageNotFound />} />
+      
     </Routes>
   );
 };

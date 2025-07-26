@@ -1,5 +1,7 @@
+import usePageTitle from "../hooks/usePageTitle";
 
 const PrivacyPolicy = () => {
+  usePageTitle("Privacy Policy | HOX");
   return (
     <div className="privacy-policy">
       <h1>Privacy Policy for HOUSE OF X</h1>

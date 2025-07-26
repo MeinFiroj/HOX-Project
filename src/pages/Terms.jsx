@@ -1,6 +1,8 @@
 import React from "react";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Terms = () => {
+  usePageTitle('Terms | HOX')
   return (
     <div className="terms">
       <h2>Introduction</h2>

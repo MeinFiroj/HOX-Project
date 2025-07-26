@@ -1,4 +1,7 @@
+import usePageTitle from "../../hooks/usePageTitle";
+
 const Contact = () => {
+  usePageTitle("Contact us | House of x");
   return (
     <div className="contact">
       <h1>Contact</h1>

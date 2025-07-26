@@ -2,6 +2,11 @@
     padding: $padding-mob;
     padding-block: 3.5rem;
 
+    .big {
+        display: inline-block;
+        // transform: scale(2);
+    }
+
     .headings {
         position: relative;
         z-index: 1;

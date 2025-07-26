@@ -1,7 +1,9 @@
 import client1 from "../../assets/images/client1.png";
 import client2 from "../../assets/images/client2.png";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const HOXLaunch = () => {
+  usePageTitle("HOX Launch");
   const cards = [
     {
       launchStatus: true,
@@ -44,7 +46,12 @@ const HOXLaunch = () => {
             rel="noopener noreferrer"
             className="launch-card"
           >
-            <img loading="lazy" src={card.image} alt={card.name} className="card-img" />
+            <img
+              loading="lazy"
+              src={card.image}
+              alt={card.name}
+              className="card-img"
+            />
             <div className="card-content">
               <h2 className="card-title">{card.name}</h2>
               {card.role !== "?" ? (

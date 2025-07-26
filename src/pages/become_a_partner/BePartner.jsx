@@ -1,12 +1,14 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Contacts from "../../components/Contacts";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const BePartner = () => {
+  usePageTitle("Become a Partner | HOX");
   const navigate = useNavigate();
   const contacts = {
-    email : 'Mail : contact@houseofx.in',
-    call : 'Phone : +917760930987',
-  }
+    email: "Mail : contact@houseofx.in",
+    call: "Phone : +917760930987",
+  };
   return (
     <div className="be-partner">
       <h1>BECOME A PARTNER</h1>
@@ -20,9 +22,14 @@ const BePartner = () => {
         growth and success.
       </p>
 
-      <Contacts text = {contacts}/>
+      <Contacts text={contacts} />
 
-      <button className="joining-btn" onClick={()=> navigate('/become-a-partner/joining-form')}>Join Now</button>
+      <button
+        className="joining-btn"
+        onClick={() => navigate("/become-a-partner/joining-form")}
+      >
+        Join Now
+      </button>
 
       <hr />
 

@@ -1,5 +1,63 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
+  // document.addEventListener("load", () => {
+  //   requestAnimationFrame(() => {
+  //     startHeadingAnimation()
+  //   });
+  // });
+
+  const startHeadingAnimation = () => {
+    gsap
+      .timeline()
+      .from(".headings h2", {
+        x: 200,
+        opacity: 0,
+      })
+      .from(".headings h1", {
+        x: -100,
+        opacity: 0,
+        delay: 0.4,
+      })
+      .from(".hero p", {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.5,
+      })
+      .from(".headings .big", {
+        rotateZ: 20,
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.inOut",
+      })
+      .to(".headings .big", {
+        rotateZ: -20,
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.inOut",
+      })
+      .to(".headings .big", {
+        rotateZ: 15,
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.inOut",
+      })
+      .to(".headings .big", {
+        rotateZ: -15,
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.inOut",
+      })
+      .to(".headings .big", {
+        rotateZ: 0,
+        scale: 1,
+        duration: 0.4,
+        ease: "elastic.out(1, 0.5)",
+      });
+  };
+
+  setTimeout(startHeadingAnimation, 1000);
   return (
     <section className="hero">
       <div className="headings">

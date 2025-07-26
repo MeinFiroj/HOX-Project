@@ -82,7 +82,7 @@ const OurInvestors = () => {
     gsap.to(".cursor", {
       left: x,
       top: y,
-      duration: 0.6,
+      duration: 1,
     });
   };
 

@@ -1,4 +1,4 @@
-import Marque from "../../components/marque/Marque";
+import Marque from "../marque/Marque";
 import image from "../../assets/images/dealingprocess.webp";
 import useHorizontalScroll from "../onscrollslider/useHorizontalScroll";
 
